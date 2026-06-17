@@ -82,33 +82,16 @@ export function HeroSection() {
             {/* Static Theme Ambient Glow */}
             <div className="absolute -inset-10 rounded-full bg-accent opacity-20 blur-[50px] group-hover:opacity-40 transition-opacity duration-700" />
             
-            {/* Water Blob 1 */}
-            <motion.div 
-              className="absolute -inset-4 border-[3px] border-accent/40 bg-accent/10"
-              style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-            />
 
-            {/* Water Blob 2 */}
-            <motion.div 
-              className="absolute -inset-4 border-[3px] border-accent/30 bg-accent/5"
-              style={{ borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%" }}
-              animate={{ rotate: -360 }}
-              transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-            />
 
             {/* Floating Picture Container */}
             <motion.div
               className="relative z-10 h-44 w-44 sm:h-56 sm:w-56 overflow-hidden rounded-full border-[4px] border-white/10 shadow-[0_0_50px_rgba(var(--accent),0.2)] bg-surface backdrop-blur-xl"
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              whileHover={{ scale: 1.05 }}
             >
               <img
                 src="/profile.png"
                 alt="Profile Photo"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="h-full w-full object-cover"
               />
             </motion.div>
           </div>
