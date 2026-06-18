@@ -187,23 +187,7 @@ export function HeroSection() {
 
       </motion.div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <div className="flex flex-col items-center gap-3">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-muted/50 font-bold">Thank You</p>
-          <div className="w-5 h-8 border border-border/40 rounded-full flex justify-center p-1 bg-surface/20 backdrop-blur-sm">
-            <motion.div
-              className="w-1 h-2 bg-accent rounded-full"
-              animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
-        </div>
-      </motion.div>
+
     </SectionShell>
   );
 }

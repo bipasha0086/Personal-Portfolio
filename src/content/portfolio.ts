@@ -1,10 +1,11 @@
 export const navigationLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
+  { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Photos", href: "#photos" },
-  { label: "Skills", href: "#skills" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Certification", href: "#certifications" },
+  { label: "Contact Details", href: "#contact" },
 ];
 
 export const heroStats = [

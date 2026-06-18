@@ -37,12 +37,16 @@ export function PortfolioPage() {
       />
 
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-2xl">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-          <div aria-hidden="true"></div>
+        <div className="flex w-full items-center justify-between px-6 py-4 lg:px-12">
+          <div className="flex items-center">
+            <span className="text-xl sm:text-2xl font-black tracking-widest uppercase text-foreground bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+              Welcome
+            </span>
+          </div>
 
           <nav className="hidden items-center gap-8 lg:flex">
             {navigationLinks.map((item) => (
-              <a key={item.label} href={item.href} className="text-lg font-semibold text-muted transition-colors hover:text-foreground">
+              <a key={item.label} href={item.href} className="text-base sm:text-lg font-semibold text-muted transition-colors hover:text-foreground whitespace-nowrap">
                 {item.label}
               </a>
             ))}

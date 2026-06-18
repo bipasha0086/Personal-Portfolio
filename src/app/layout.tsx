@@ -19,7 +19,7 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bipasha|Engineer",
+  title: "Bipasha",
   description: "A premium portfolio showcasing my work, skills, and experience.",
   keywords: ["portfolio", "software engineer", "next.js", "framer motion", "react"],
   authors: [{ name: "Your Name" }],
