@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
 // Generate static stars data outside component to maintain hook purity
-const starsData = Array.from({ length: 400 }).map((_, i) => ({
+const starsData = Array.from({ length: 100 }).map((_, i) => ({
   id: i,
   left: `${Math.random() * 100}%`,
   top: `${Math.random() * 100}%`,
@@ -15,7 +15,7 @@ const starsData = Array.from({ length: 400 }).map((_, i) => ({
 }));
 
 // Shooting stars data
-const shootingStarsData = Array.from({ length: 15 }).map((_, i) => ({
+const shootingStarsData = Array.from({ length: 5 }).map((_, i) => ({
   id: `shooting-${i}`,
   top: `${Math.random() * 50}%`,
   left: `${-20 - Math.random() * 30}%`,
@@ -86,7 +86,7 @@ export function AnimatedBackground() {
 
           {/* Starfield Layer 1 (Far stars, slow parallax) */}
           <motion.div className="absolute inset-0" style={{ x: layer1X, y: layer1Y }}>
-            {starsData.slice(0, 200).map((star) => (
+            {starsData.slice(0, 50).map((star) => (
               <motion.div
                 key={star.id}
                 className="absolute rounded-full bg-slate-300 shadow-[0_0_12px_rgba(255,255,255,0.6)]"
@@ -99,7 +99,7 @@ export function AnimatedBackground() {
 
           {/* Starfield Layer 2 (Near stars, fast parallax, glowing) */}
           <motion.div className="absolute inset-0" style={{ x: layer2X, y: layer2Y }}>
-            {starsData.slice(200).map((star) => (
+            {starsData.slice(50).map((star) => (
               <motion.div
                 key={star.id}
                 className="absolute rounded-full bg-cyan-100 shadow-[0_0_20px_rgba(34,211,238,1)]"

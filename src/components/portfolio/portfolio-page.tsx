@@ -7,20 +7,22 @@ import { CursorGlow } from "./cursor-glow";
 import { SplashScreen } from "./splash-screen";
 import { ThemeToggle } from "./theme-toggle";
 import { navigationLinks } from "@/content/portfolio";
-import { AboutSection } from "./sections/about-section";
-import { AchievementsSection } from "./sections/achievements-section";
-import { CertificationsSection } from "./sections/certifications-section";
-import { ContactSection } from "./sections/contact-section";
-import { EducationSection } from "./sections/education-section";
-import { ExperienceSection } from "./sections/experience-section";
-import { IndustrialTrainingSection } from "./sections/industrial-training-section";
-import { FooterSection } from "./sections/footer-section";
+import dynamic from "next/dynamic";
 import { HeroSection } from "./sections/hero-section";
-import { InterpersonalSkillsSection } from "./sections/interpersonal-skills-section";
-import { LanguagesSection } from "./sections/languages-section";
-import { ProjectsSection } from "./sections/projects-section";
-import { SkillsSection } from "./sections/skills-section";
-import { PhotosSection } from "./sections/photos-section";
+
+const AboutSection = dynamic(() => import("./sections/about-section").then((mod) => mod.AboutSection));
+const AchievementsSection = dynamic(() => import("./sections/achievements-section").then((mod) => mod.AchievementsSection));
+const CertificationsSection = dynamic(() => import("./sections/certifications-section").then((mod) => mod.CertificationsSection));
+const ContactSection = dynamic(() => import("./sections/contact-section").then((mod) => mod.ContactSection));
+const EducationSection = dynamic(() => import("./sections/education-section").then((mod) => mod.EducationSection));
+const ExperienceSection = dynamic(() => import("./sections/experience-section").then((mod) => mod.ExperienceSection));
+const IndustrialTrainingSection = dynamic(() => import("./sections/industrial-training-section").then((mod) => mod.IndustrialTrainingSection));
+const FooterSection = dynamic(() => import("./sections/footer-section").then((mod) => mod.FooterSection));
+const InterpersonalSkillsSection = dynamic(() => import("./sections/interpersonal-skills-section").then((mod) => mod.InterpersonalSkillsSection));
+const LanguagesSection = dynamic(() => import("./sections/languages-section").then((mod) => mod.LanguagesSection));
+const ProjectsSection = dynamic(() => import("./sections/projects-section").then((mod) => mod.ProjectsSection));
+const SkillsSection = dynamic(() => import("./sections/skills-section").then((mod) => mod.SkillsSection));
+const PhotosSection = dynamic(() => import("./sections/photos-section").then((mod) => mod.PhotosSection));
 
 export function PortfolioPage() {
   const { scrollYProgress } = useScroll();
